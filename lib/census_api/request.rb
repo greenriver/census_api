@@ -16,9 +16,10 @@ module CensusApi
         #{source: 'acs3', from: 2012, to: 2013, new_endpoint: 'acs/acs3'},
         {source: 'acs5', from: 2010, to: 2015, new_endpoint: 'acs/acs5'},
         {source: 'acsse', from: 2014, to: 2015, new_endpoint: 'acs/acsse'},
-        {source: 'sf1', from: 2010, to: 2010, new_endpoint: 'dec/sf1'}
+        {source: 'sf1', from: 2010, to: 2010, new_endpoint: 'dec/sf1'},
+        {source: 'acs5p', from: 2011, to: 2100, new_endpoint: 'acs/acs5/profile'},
       ]
-      route = api_changes.detect do |a| 
+      route = api_changes.detect do |a|
         a[:source] == source && a[:from] <= vintage.to_i && a[:to] >= vintage.to_i
       end
       if route

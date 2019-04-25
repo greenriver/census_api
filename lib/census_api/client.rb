@@ -10,7 +10,7 @@ module CensusApi
     attr_reader :api_key, :api_vintage, :options
     attr_accessor :dataset
 
-    DATASETS = %w( sf1 acs1 acs3 acs5 )
+    DATASETS = %w( sf1 acs1 acs3 acs5 acs5p)
     # can add more datasets as support becomes available
 
     def initialize(api_key, options = {})
